@@ -1,43 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_box"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="48dp"
+    tools:background="#99000000">
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
-        android:paddingLeft="5dp"
-        android:textSize="30dp"
-        android:layout_marginBottom="15dp" />
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_above="@+id/tv_content"/>
 
     <TextView
+        tools:text="IS THIS YOUR ELEMENT?"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:gravity="center"
         android:id="@+id/tv_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:paddingLeft="5dp"
-        android:textSize="20dp" />
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/rl_sc_buttons"/>
 
-    <TextView
-        android:id="@+id/tv_dismiss"
-        android:background="?android:attr/selectableItemBackground"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/rl_sc_buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:clickable="true"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:textColor="@android:color/white"
-        android:textSize="22dp"
-        android:visibility="gone" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_dismiss"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circular_textview"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            tools:text="No" />
+
+        <TextView
+            android:id="@+id/confirmButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+
+            android:background="@drawable/circular_textview"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            tools:text="Yes" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_skip"
@@ -53,6 +95,6 @@
         android:text="TERMINAR"
         android:textColor="@android:color/white"
         android:textSize="18dp"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
-</LinearLayout>
+</RelativeLayout>
