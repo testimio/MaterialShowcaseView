@@ -963,7 +963,7 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
 
         return true;
     }
-    
+
     public boolean show(final Activity activity) {
         return true;
     }
